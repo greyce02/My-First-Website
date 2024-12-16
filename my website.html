@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage 2.0</title>
+</head>
+<body>
+    <article>
+        <section>
+            <h1>My First Webpage!! (now with JavaScript :)</h1>
+            <image></image>
+            <div>
+                <h2>My Favorite Books</h2>
+                <button onclick="showItems()">Show Favs</button>
+                <ul id="hidden-list" style="display: none;">
+                    <li>The Hunger Games</li>
+                    <li>Farenheight 451</li>
+                    <li>The Lost Apothecary</li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="para-heading"></h2>
+                <p id="para-body"></p>
+            </div>
+            <button onclick="showDateAndTime()">Show Date And Time</button>
+        </section>
+    </article>
+</body>
+<script>
+    function showItems () {
+        document.getElementById("hidden-list").style.display = "block"
+    }
+
+    document.getElementById("para-heading").innerHTML = "A Little Bit About Me"
+    document.getElementById("para-body").innerHTML = "Hi, my name is James Brooks. I'm from Huntington, West Virginia. I'm 36. I have 2 kids, a dog and a cat."
+
+    function showDateAndTime () {
+        document.body.innerHTML += "<div> Today's date and time is " + new Date() + "</div>"
